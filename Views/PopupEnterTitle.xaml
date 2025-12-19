@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Ebook.Views.PopupEnterTitle"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#80000000">
+
+    <VerticalStackLayout
+        Padding="20"
+        Margin="30"
+        BackgroundColor="White"
+        VerticalOptions="Center"
+        Spacing="12">
+
+        <Label
+            Text="Введите название книги"
+            FontSize="18"
+            TextColor="Black" />
+
+        <Entry
+            x:Name="EntryTitle"
+            Placeholder="Название"
+            BackgroundColor="#f0f0f0"
+            TextColor="Black"
+            PlaceholderColor="Gray" />
+
+        <Button
+            Text="OK"
+            BackgroundColor="#3366FF"
+            TextColor="White"
+            Clicked="OnConfirmClicked" />
+
+    </VerticalStackLayout>
+
+</ContentPage>

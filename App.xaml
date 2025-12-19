@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Application
+    x:Class="Ebook.App"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Ebook"
+   >
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <Color x:Key="BackgroundColor">#121212</Color>
+            <Color x:Key="CardColor">#1E1E1E</Color>
+            <Color x:Key="AccentColor">#4CAF50</Color>
+            <Color x:Key="TextColor">#FFFFFF</Color>
+            <Color x:Key="SubTextColor">#BBBBBB</Color>
+            <local:GreaterThanZeroConverter x:Key="GreaterThanZeroConverter"/>
+            <local:RatingColorConverter x:Key="RatingColorConverter"/>
+            <local:BookAndRatingConverter x:Key="BookAndRatingConverter"/>
+            <local:InvertBoolConverter x:Key="InvertBoolConverter" />
+            <Style x:Key="ReaderButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#33000000"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="CornerRadius" Value="30"/>
+                <Setter Property="WidthRequest" Value="50"/>
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale" Value="0.92"/>
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale" Value="1"/>
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+            <Style TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColor}" />
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource TextColor}" />
+            </Style>
+
+            <Style TargetType="Entry">
+                <Setter Property="TextColor" Value="{StaticResource TextColor}" />
+                <Setter Property="PlaceholderColor" Value="{StaticResource SubTextColor}" />
+                <Setter Property="BackgroundColor" Value="#222222" />
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource AccentColor}" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="CornerRadius" Value="8" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

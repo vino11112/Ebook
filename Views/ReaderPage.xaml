@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Ebook.Views.ReaderPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="Black"
+    Title="Чтение">
+
+    <Grid RowDefinitions="Auto,*" Padding="10">
+
+        <HorizontalStackLayout Grid.Row="0" Spacing="16" HorizontalOptions="Center">
+            <Button Text="⟵" Command="{Binding PrevPageCommand}" />
+
+            <Label Text="{Binding DisplayPageNumber, StringFormat='Стр. {0}'}"
+                   TextColor="White"
+                   FontSize="18" />
+
+            <Label Text="{Binding TotalPages, StringFormat='/ {0}'}"
+                   TextColor="White"
+                   FontSize="16" />
+
+            <Button Text="⟶" Command="{Binding NextPageCommand}" />
+        </HorizontalStackLayout>
+
+        <Image
+            Grid.Row="1"
+            x:Name="PdfImage"
+            Source="{Binding PageImage}"
+            Aspect="AspectFit"
+            BackgroundColor="Black"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+
+            <Image.GestureRecognizers>
+                <SwipeGestureRecognizer Direction="Left"
+                                        Command="{Binding NextPageCommand}" />
+                <SwipeGestureRecognizer Direction="Right"
+                                        Command="{Binding PrevPageCommand}" />
+            </Image.GestureRecognizers>
+
+        </Image>
+
+    </Grid>
+</ContentPage>
