@@ -26,7 +26,7 @@
 
 <!-- Кнопки действий -->
 <p align="center">
-  <a href="https://github.com/ваш-username/Ebook/releases">
+  <a href="https://github.com/vino11112/Ebook/releases">
     <img src="https://img.shields.io/badge/📲_Скачать_APK_ПРЯМО_СЕЙЧАС-v1.0.0-red?style=for-the-badge&logo=android" />
   </a>
  
